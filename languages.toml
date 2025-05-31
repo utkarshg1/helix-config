@@ -1,0 +1,13 @@
+[[language]]
+name = "python"
+language-servers = ["pyright"]
+auto-format = true
+formatter = { command = "ruff", args = ["format", "--line-length", "88", "-"] }
+
+[language-server.pyright]
+command = "./.venv/Scripts/pyright-langserver.exe"
+args = ["--stdio"]
+
+[language-server.pyright.config]
+python.pythonPath = "./.venv/Scripts/python.exe"
+
