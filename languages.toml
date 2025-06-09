@@ -23,3 +23,14 @@ formatter = { command = "prettier", args = ["--stdin-filepath", "file.js"] }
 command = "typescript-language-server"
 args = ["--stdio"]
 
+# --- Rust configuration ---
+[[language]]
+name = "rust"
+language-servers = ["rust-analyzer"]
+auto-format = true
+roots = ["Cargo.toml", ".git"]
+formatter = { command = "rustfmt", args = ["--edition", "2021"] }
+
+[language-server.rust-analyzer]
+command = "rust-analyzer"
+
